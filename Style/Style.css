@@ -1,0 +1,62 @@
+/* Styles pour le lien "Panier" */
+.link {
+  text-decoration: none;
+  color: #0074d9;
+  font-weight: bold;
+}
+
+/* Styles pour le nombre dans le panier */
+.link span {
+  background-color: #ff4136;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Styles pour la liste de produits */
+.product_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Styles pour chaque produit */
+.product {
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product h4 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.product h2 {
+  font-size: 18px;
+  color: #2ecc40;
+  margin: 10px 0;
+}
+
+.product a {
+  display: block;
+  background-color: #0074d9;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.product a:hover {
+  background-color: #0056b3;
+}
