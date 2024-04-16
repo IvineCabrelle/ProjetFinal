@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="../Style/styleAjouterPanier.css">
 <?php
 session_start();
 
@@ -47,16 +48,20 @@ if(isset($_GET["del"])){
                 ?>
                 <tr>
                     <td><img src="./images/<?= $produit["img"]?>" alt=""></td>
+                   
                     <td><?= $produit["nom"]?></td>
                     <td><?= $produit["prix"]?></td>
                    <td><?= $_SESSION["panier"][$produit["id"]]?></td> 
-                   <td><a href="panier.php?del=<?=$produit["id"]?>"><img src="delete.png" alt=""></a></td>
+                   <td><a href="delete.php?del=<?=$produit["id"]?>"><img src="../images/delete.jpeg" alt=""></a></td>
+
                 </tr>
 
                 <?php endforeach; } ?>
         
                 <tr class="total">
                     <th>total: <?=$total?></th>
+                  
+
                 </tr>
 
 

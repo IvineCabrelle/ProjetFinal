@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../Style/Style">
+
 <?php
 
 include_once("../PageConnexion/Connexion.php");
@@ -29,7 +29,9 @@ if(isset($_GET["id"])){
     }
 
     header("location:../Panier/PageAccueilPanier.php");
-    
-
+       
+}
+else{
+    header("location:../Views/administrateur.php");
     
 }

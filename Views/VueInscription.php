@@ -69,6 +69,7 @@
 
             <button type="submit">S'inscrire</button>
             <p class="login-message">Déjà un compte ? <a href="../Views/VueConnexion.php">Connectez-vous ici</a></p>
+            <p class="login-message">Adresse : <a href="../forms/form1.php">Ajouter vos adresses ici</a>
         </form>
     </div>
     
