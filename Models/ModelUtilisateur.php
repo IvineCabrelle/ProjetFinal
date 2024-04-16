@@ -40,9 +40,9 @@ class ModelUtilisateur{
             }
 
         }
-        else{
-            echo "Login ou le mot de passe est incorrect";
-            header("location:../Panier/PageAccueilPanier.php");
+    else{
+      echo "Login ou le mot de passe est incorrect";
+     header("location:../Panier/PageAccueilPanier.php");
             
         }
 
