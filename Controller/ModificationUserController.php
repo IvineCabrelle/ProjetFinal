@@ -30,7 +30,7 @@ class UserController {
 
             // Appeler le modèle pour effectuer les modifications en base de données
             $model=new ModelUtilisateur($dbco);
-            $model->updateUser($users);
+            //$model->updateUser($users);
 
             // Rediriger l'utilisateur vers une page de confirmation
             header('Location: confirmation_page.php');

@@ -31,6 +31,7 @@ if(isset($_GET["id"])){
     header("location:../Panier/PageAccueilPanier.php");
        
 }
+
 else{
     header("location:../Views/administrateur.php");
     

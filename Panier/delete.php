@@ -6,7 +6,7 @@ if(isset($_GET["del"])){
     unset($_SESSION["panier"][$id_del]);
 }
 
-header("Location:../Panier/panier.ph");
+header("Location:../Panier/panier.php");
 
 
 ?>

@@ -21,46 +21,44 @@ class ModelUtilisateur{
             return Array();
         }
     }
-    public function Connexion($login,$password){
+    public function Connexion($Email, $password){
         
-        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+        $sql = $this->db->query("SELECT profil FROM users WHERE Email = '".$Email."' AND password ='".$password."' ");
+    
 
-        
-        //$sql = $this->db->query("SELECT * FROM users WHERE Nom = '" . $login . "' AND password = '" . $password . "'");
-        $sql = $this->db->prepare("SELECT * FROM users WHERE Nom = :login AND password = :password");
-        $sql->execute(array(':login' => $login, ':password' => $password));
+        if($res=$sql->fetch()){
 
-        if($res= $sql->fetch())
-        {
-            echo"Connexion établie";
-            
             if($res["profil"]=="admin"){
-                header("location:../Views/administrateur.php");
-                
+                 header("location:../Views/administrateur.php");  
             }
+            else
+            {
+                header("location:../Panier/AjouterPanier.php");
+            }
+            var_dump($res);
 
+            echo "Connexion établie";
         }
-    else{
-      echo "Login ou le mot de passe est incorrect";
-     header("location:../Panier/PageAccueilPanier.php");
-            
+        else{
+            echo"Login ou mot de passe incorrect";
         }
 
     }
-    public function AjouterUsers(users $users){
-        $sql= $this->db->prepare("INSERT INTO users VALUES(NULL,?,?,?,?,?);");
+    
+    public function AjouterUsers(users $users) {
+        $password = $_POST['password'];
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    
+        $sql = $this->db->prepare("INSERT INTO users VALUES(NULL,?,?,?,?,?);");
         $sql->execute(array(
-            $users->getPrenom(),
             $users->getNom(),
-            
+            $users->getPrenom(),
             $users->getEmail(),
-            $users->getpassword(),
-            $users->getprofil(),
-
-            
-
+            $hashedPassword, // Enregistrer le mot de passe haché
+            $users->getprofil()
         ));
     }
+    
     // Modèle
 
     public function updateUser(users $users) {
@@ -75,4 +73,3 @@ class ModelUtilisateur{
 
      
 
-?>
