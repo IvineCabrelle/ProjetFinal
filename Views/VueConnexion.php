@@ -50,15 +50,18 @@
         <div class="form-container">
         <form action="../Controller/ConnexionController.php" method="post">
            
-            <label for="Nom">Nom d'utilisateur :</label>
-            <input type="text" id="Nom" name="Nom" required>
+            <label for="Email">Email d'utilisateur :</label>
+            <input type="email" id="Email" name="Email" required>
            
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">Se connecter</button>
+            <button type="submit" name="submit">Se connecter</button>
             <p class="login-message">Vous n'avez pas de compte ? <a href="../Views/VueInscription.php">Inscrivez-vous</a></p>
         </form>
     </div>
+    <?php
+    
+    ?>
 </body>
 </html>

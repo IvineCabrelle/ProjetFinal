@@ -12,7 +12,6 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -151,21 +150,18 @@
     
 <header data-bs-theme="dark">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">ac
-      <a class="navbar-brand" href="../index.php">home</a>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../accueil/accueil.php">home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./ModifierProduits.php">modifier produits</a>
+            <a class="nav-link active" aria-current="page" href="../gestion de produits/AjouterProduits.php">Ajouter les produits</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./SupprimerProduit.php">Supprimer vos produits</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../Deconnexion/Deconnexion.php">Deconnexion</a>
+            <a class="nav-link" href="../gestion de produits/SupprimerProduit.php/">supprimer les produits</a>
           </li>
           
         </ul>
@@ -222,25 +218,50 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <form method="post" action="./ProduitResultat.php">
-  <div class="mb-3">
-    <label for="img" class="form-label">url de l'image</label>
-    <input type="text" class="form-control" id="img" name="img">
+<form method="post" action="./ProduitResultat.php">
+ 
+<div class="mb-3">
+<?php
+if(isset($_GET['field'])) {
+    $field = $_GET['field'];
 
-    <div class="mb-3">
-      <label for="prix" class="form-label">prix</label>
-      <input type="text" class="form-control" id="prix" name="prix">
-    </div>
+    switch($field) {
+        case "img":
+            echo "Vous avez choisi de modifier l'url de l'image";
+            break;
+        case "prix":
+            echo "Vous avez choisi de modifier le prix";
+            break;
+        case "nom":
+            echo "Vous avez choisi de modifier le nom";
+            break;
+      
+        default:
+            echo "Champ non valide";
+            break;
+    }
+}
+?>
 
-    <label for="nom" class="form-label">nom</label>
-    <input type="text" class="form-control" id="nom" name="nom" aria-describedby="emailHelp">
-    <div class="mb-3">
-    </div>
-  <button type="submit" class="btn btn-primary">Ajouter le produit</button>
-  </div>
+<form action="traitement.php" method="get">
+    <label for="field" class="form-label">Quel champ souhaitez-vous modifier ?</label>
+    <select class="form-select" id="field" name="field">
+        <option value="img">url de l'image</option>
+        <option value="prix">prix</option>
+        <option value="nom">nom</option>
+        
+    </select>
+    
+    <button type="submit" class="btn btn-primary">Choisir le champ</button>
 </form>
 
- 
+</form>
+
+   
+
+
+    
+  
 </main>
 
   

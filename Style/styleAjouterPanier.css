@@ -1,28 +1,29 @@
 /* Réinitialisation des styles par défaut */
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 /* Styles du corps */
-body.panier {
+/* body.panier {
   font-family: Arial, sans-serif;
   background-color: #484274;
   padding: 20px;
-}
+} */
 
 /* Styles des liens */
-a.link {
+* a.link {
   text-decoration: none;
   color: #29609b;
   font-weight: bold;
   margin-bottom: 20px;
   display: block;
 }
+*/
 
 /* Styles du tableau */
-table {
+ table {
   width: 100%;
   border-collapse: collapse;
   background-color: #c4d2c6;
@@ -49,7 +50,56 @@ tr.total th {
   padding-top: 20px;
   text-align: center; /* Centrer le total */
 }
-delete {
+
+.delete {
   width: 300px;
   height: 200px;
+}
+.panier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+body.panier img {
+  width: 40px;
+  padding: 8px 0;
+}
+
+body.panier section {
+  width: 70%;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+table th {
+  padding: 10px 0;
+  font-weight: 400;
+}
+
+table td {
+  border-top: 0.5px #999;
+  text-align: center;
+  color: #37a6ff;
+}
+
+tr {
+  border-bottom: 0.5px solid #999;
+}
+
+tr.total th {
+  border: 0;
+  float: left;
+  font-weight: 500;
+  color: #37a6ff;
+  padding: 10px;
 }

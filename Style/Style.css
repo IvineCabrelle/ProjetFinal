@@ -1,12 +1,12 @@
-/* Styles pour le lien "Panier" */
-.link {
+/* Styles pour le lien "Panier"*/
+/*.link {
   text-decoration: none;
   color: #0074d9;
   font-weight: bold;
 }
 
 /* Styles pour le nombre dans le panier */
-.link span {
+/*.link span {
   background-color: #ff4136;
   color: rgb(83, 76, 76);
   padding: 2px 6px;
@@ -14,16 +14,17 @@
   font-size: 12px;
   margin-left: 5px;
 }
+*/
 
 /* Styles pour la liste de produits */
-.product_list {
+/* .product_list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 /* Styles pour chaque produit */
-.product {
+/*.product {
   border: 1px solid #e5e5e5;
   padding: 10px;
   width: 200px;
@@ -34,8 +35,7 @@
   max-width: 100%;
   height: auto;
 }
-
-.product h4 {
+*/ /* .product h4 {
   font-size: 16px;
   margin: 10px 0;
 }
@@ -56,7 +56,258 @@
   margin-top: 10px;
   transition: background-color 0.3s;
 }
-
-.product a:hover {
+/* .product a:hover {
   background-color: #0056b3;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: pink;
+}
+
+.link {
+  margin: 20px;
+  width: fit-content;
+  position: relative;
+  text-decoration: 0;
+  background-color: blue;
+  color: whitesmoke;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+span {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  color: aliceblue;
+}
+
+.products_list {
+  margin: 100px auto;
+  position: relative;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-gap: 25px;
+}
+
+.product {
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.product:hover {
+  transform: scale(1.1);
+}
+
+.image_product {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_product img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  padding: 20px;
+}
+
+.content {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  height: fit-content;
+  text-align: center;
+}
+
+.price {
+  margin: 15px 0;
+  font-weight: 400;
+  color: #37a6ff;
+}
+
+.id_product {
+  text-align: center;
+  text-decoration: 0;
+  background-color: #37a6ff;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px 10%;
+  border-radius: 6px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: pink;
+}
+
+.link {
+  margin: 20px;
+  width: fit-content;
+  position: relative;
+  text-decoration: 0;
+  background-color: blue;
+  color: whitesmoke;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+span {
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  background-color: red;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
+  color: aliceblue;
+}
+
+.products_list {
+  margin: 100px auto;
+  position: relative;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-gap: 25px;
+}
+
+.product {
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.product:hover {
+  transform: scale(1.1);
+}
+
+.image_product {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image_product img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  padding: 20px;
+}
+
+.content {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  height: fit-content;
+  text-align: center;
+}
+
+.price {
+  margin: 15px 0;
+  font-weight: 400;
+  color: #37a6ff;
+}
+
+/*.id_product {
+  text-align: center;
+  text-decoration: 0;
+  background-color: #37a6ff;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 10px 10%;
+  border-radius: 6px;
+}
+/* style.css */
+/* .product-table {
+  width: 100%;
+  border-collapse: collapse; /* Fusionner les bordures des cellules */
+/*}
+
+.product-table th,
+.product-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+} */
+
+/*.product-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+/* style.css */
+
+/* Style général pour le corps de la page */
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #ff9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid black;
+}
+
+/* Style pour les liens dans la classe "link" */
+.link {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Style pour le texte dans les éléments h4 */
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Style pour le texte dans les éléments h2 */
+h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+/* Style pour les images dans les éléments div */
+div img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style pour les liens dans les éléments a */
+a {
+  text-decoration: none;
+  color: #ff9500;
+  font-weight: bold;
+}
+
+/* Style pour les formulaires dans la classe "product" */
+.product form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
