@@ -40,39 +40,5 @@ var_dump($_POST);
 ?>
 <p class="login-message">Panier <a href="../Panier/PageAccueilPanier.php">Voir Panier</a></p>
 
-/* modifierProduit.php
-<?php
+?>
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $data = array(
-        'id' => $_POST['id'],
-        'img' => $_POST['img'],
-        'prix' => $_POST['prix'],
-        'nom' => $_POST['nom']
-    );
-    if( updateProduct($data)) {
-
-      echo "Produit modifié avec succès";  
-  } 
-  else {
-      echo "Erreur lors de la modification du produit";
-  }
-} else {
-  echo "Veuillez remplir tous les champs du formulaire";
-}
-
-   
-
-
-
-
-
-
-
-// else if ($Delete=deleteProduct($_POST)){
-//     echo "Produit supprimé avec succès";
-// }
-
-// else if ($Modifier=updateProduct($_POST)){
-//     echo "Produit modifié avec succès";
-// }

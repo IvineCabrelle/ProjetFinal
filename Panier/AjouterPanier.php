@@ -28,11 +28,11 @@ if(isset($_GET["id"])){
         $_SESSION["panier"][$id]= 1;
     }
 
-    header("location:../Panier/PageAccueilPanier.php");
+    //header("location:../Panier/PageAccueilPanier.php");
        
 }
 
-else{
-    header("location:../Views/administrateur.php");
+// else{
+//     header("location:../Views/administrateur.php");
     
-}
+// }

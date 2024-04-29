@@ -71,24 +71,27 @@ function deleteProduct($id)
 }
 
 
-
-
-function updateProduct(array $data)
-{
-    $dbco = connectDB();
+function updateProduct($id, $newData) {
+    global $dbco;
     
-    $query = "UPDATE produit SET img = :img, prix = :prix, nom = :nom WHERE id = :id";
-    $stmt = $dbco->prepare($query);
+    $sql = "UPDATE produits SET img = :img, prix = :prix, nom = :nom WHERE id = :id";
     
-    $stmt->bindParam(':img', $data['img']);
-    $stmt->bindParam(':prix', $data['prix']);
-    $stmt->bindParam(':nom', $data['nom']);
-    $stmt->bindParam(':id', $data['id']);
+    $stmt = $dbco->prepare($sql);
     
-    $stmt->execute();
+    $stmt->bindParam(':img', $newData['img']);
+    $stmt->bindParam(':prix', $newData['prix']);
+    $stmt->bindParam(':nom', $newData['nom']);
+    $stmt->bindParam(':id', $id);
     
-    echo "Produit modifié avec succès";
+    if($stmt->execute()) {
+        return true;
+    } else {
+        return false;
+    }
 }
+
+
+
 
 function getProductByName($name)
 {

@@ -29,11 +29,13 @@ class ModelUtilisateur{
         if($res=$sql->fetch()){
 
             if($res["profil"]=="admin"){
+                
                  header("location:../Views/administrateur.php");  
             }
             else
             {
-                header("location:../Panier/AjouterPanier.php");
+                header("location:../Views/pageInformations.php");
+                
             }
             var_dump($res);
 
