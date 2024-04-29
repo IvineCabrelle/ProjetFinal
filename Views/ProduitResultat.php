@@ -40,5 +40,5 @@ var_dump($_POST);
 ?>
 <p class="login-message">Panier <a href="../Panier/PageAccueilPanier.php">Voir Panier</a></p>
 
-?>
+
 
